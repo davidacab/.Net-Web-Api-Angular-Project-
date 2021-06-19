@@ -1,0 +1,19 @@
+
+
+<div >
+    <table class="table" >
+        <tr>
+            <th></th>
+            <th>Card Owner</th>
+            <th>Expiration Date</th>
+            <th>Security Code</th>
+        </tr>
+        <tr *ngFor="let pagamento of listapagamenti" >
+            <td>{{i}}</td>
+            <td (click)="populateForm(pagamento)">{{pagamento.cardOwner}}</td>
+            <td (click)="populateForm(pagamento)">{{pagamento.expirationDate}}</td>
+            <td (click)="populateForm(pagamento)">{{pagamento.securityCode}}</td>
+            <td><button (click)="delete(pagamento.paymentDetailId)">Delete</button></td>         
+    </tr>
+ </table>    
+</div>
